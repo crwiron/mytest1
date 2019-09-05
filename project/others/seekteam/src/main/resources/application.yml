@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/seek_team
+    driver-class-name: com.mysql.jdbc.Driver
+  profiles:
+    active: dev
+  mvc:
+    view:
+      prefix: classpath:/templates/
+      suffix: .html
+
+server:
+  port: 8080
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.crw.ssm.entity
+
